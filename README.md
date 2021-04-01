@@ -24,7 +24,7 @@ docker build -t cerebellum .
 docker run -p 4567:4567 -v "$PWD/data:/topics2021-cerebellum/notebooks/out:z" -it cerebellum
 ```
 This will start a Jupyter lab instance inside the docker container; open the displayed URL (e.g., `http://127.0.0.1:4567/lab?token=...`) in your browser.
-Files stored in the `notebooks/out` folder will appear in the `data` folder outside the container.
+Files stored in the `notebooks/out` folder inside the container will appear in the `data` folder outside the container.
 All other changes to the filesystem are not persistent.
 
 ### Running the experiments
@@ -37,3 +37,24 @@ The results will be placed in the `data` directory.
 ## Bibliography entry
 
 TODO
+
+## License
+
+```
+#   Code for "Connecting Biological Detail with Neural Computation:
+#   Application to the Cerebellar Granule-Golgi Microcircuit"
+#   Copyright (C) 2019-2021  Andreas Stöckel, Terry Stewart
+#
+#   This program is free software: you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation, either version 3 of the License, or
+#   (at your option) any later version.
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with this program.  If not, see <https://www.gnu.org/licenses/>.
+```
