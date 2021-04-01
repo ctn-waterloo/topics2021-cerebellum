@@ -28,4 +28,4 @@ RUN git clone https://github.com/astoeckel/nengo-bio \
 EXPOSE 4567/TCP
 ENV LD_LIBRARY_PATH=/libbioneuronqp/build/
 ADD . /topics2021-cerebellum
-CMD cd /topics2021-cerebellum && jupyter-lab --allow-root --port 4567 --ip 0.0.0.0 --no-browser
+CMD /topics2021-cerebellum/run.sh
