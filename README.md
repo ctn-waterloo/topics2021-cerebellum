@@ -1,6 +1,8 @@
-# Code for the TopiCS paper "Connecting Biological Detail with Neural Computation: Application to the Cerebellar Granule-Golgi Microcircuit"
+# Connecting Biological Detail with Neural Computation: Application to the Cerebellar Granule-Golgi Microcircuit
 
 *Andreas Stöckel, Terry Stewart, Chris Eliasmith*
+
+![Header image showing some diagrams from the Paper](images/header.jpg)
 
 The code in this repository is the codebase used to produce the results presented in the paper.
 Some modifications were made to hopefully make the code more user friendly.
