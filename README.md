@@ -20,7 +20,7 @@ To reproduce the results from the paper you can use the provided Docker containe
 Install Docker or a compatible container manager such as Podman on your system. Please follow the documentation on the Docker homepage our your operating system manual.
 
 *Step 1:*  
-Download the file `topics2021_cerebellum_docker_astoeckel_tcstewart_celiasmith.tar.bz2` from OSF.
+Download the file `topics2021_cerebellum_docker_astoeckel_tcstewart_celiasmith.tar.bz2` from [OSF](https://osf.io/fmpd2/files/).
 
 *Step 2:*  
 Place the downloaded file in a new directory. Open a command prompt and `cd` into this directory. Then, execute the following.
@@ -41,7 +41,7 @@ All other changes to the filesystem are not persistent.
 
 ### Building the Docker container from scratch
 
-Download the file `topics2021_cerebellum_source_astoeckel_tcstewart_celiasmith.tar.bz2` from OSF, or, alternatively, clone this GitHub repository.
+Download the file `topics2021_cerebellum_source_astoeckel_tcstewart_celiasmith.tar.bz2` from [OSF](https://osf.io/fmpd2/files/), or, alternatively, clone this GitHub repository.
 
 Unpack the archive and open a command prompt inside the root directory of the archive. Then run the following commands.
 ```
