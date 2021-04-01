@@ -15,7 +15,7 @@ We recommend that you use the provided Docker file to build a Docker container t
 
 To reproduce the results from the paper you can use the provided `Dockerfile` to enter a reproducible environment.
 After installing `docker` on your system, execute the following from the root directory of this repository:
-```
+```sh
 # Build the Docker container. Note that this will download a few gigabytes of data. You only need to do this
 # once.
 docker build -t cerebellum .
