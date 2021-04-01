@@ -1,0 +1,7 @@
+.ipynb_checkpoints
+__pycache__
+notebooks/out*
+notebooks/*.pdf
+notebooks/*.png
+notebooks/*.log
+notebooks/*.aux
