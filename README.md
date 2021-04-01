@@ -13,14 +13,20 @@ We recommend that you use the provided Docker file to build a Docker container t
 
 ### Opening the Docker Container
 
-To reproduce the results from the paper you can use the provided `Dockerfile` to enter a reproducible environment.
+To reproduce the results from the paper you can use the provided Docker container to enter a reproducible environment.
+You can either use the provided `Dockerfile` to rebuild the container, or download a pre-built container from the Center for Open Science (URL to be provided).
+
 After installing `docker` on your system, execute the following from the root directory of this repository:
 ```sh
-# Build the Docker container. Note that this will download a few gigabytes of data. You only need to do this
-# once.
+# Step 1: Build the docker container
+
+# Option 1: Import the pre-built container
+docker import topics2021_cerebellum_astoeckel_tcstewart_celiasmith.tar.gz cerebellum
+
+# Option 2: Re-build the docker container
 docker build -t cerebellum .
 
-# Execute the docker container.
+# Step 2: Execute the docker container.
 docker run -p 4567:4567 -v "$PWD/data:/topics2021-cerebellum/notebooks/out:z" -it cerebellum
 ```
 This will start a Jupyter lab instance inside the docker container; open the displayed URL (e.g., `http://127.0.0.1:4567/lab?token=...`) in your browser.
