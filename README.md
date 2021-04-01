@@ -11,27 +11,47 @@ The repository contains the code used to produce the data shown in the paper Top
 The code to execute and visualise the experiments can be found in the `notebooks` folder, the model itself is located in the `model` folder.
 We recommend that you use the provided Docker file to build a Docker container that can run the code.
 
-### Opening the Docker Container
+
+### Using the Pre-Built Docker Container
 
 To reproduce the results from the paper you can use the provided Docker container to enter a reproducible environment.
-You can either use the provided `Dockerfile` to rebuild the container, or download a pre-built container from the Center for Open Science (URL to be provided).
 
-After installing `docker` on your system, execute the following from the root directory of this repository:
+*Prerequisite*  
+Install Docker or a compatible container manager such as Podman on your system. Please follow the documentation on the Docker homepage our your operating system manual.
+
+*Step 1:*  
+Download the file `topics2021_cerebellum_docker_astoeckel_tcstewart_celiasmith.tar.bz2` from OSF.
+
+*Step 2:*  
+Place the downloaded file in a new directory. Open a command prompt and `cd` into this directory. Then, execute the following.
 ```sh
-# Step 1: Build the docker container
+# Import the docker container
+docker import topics2021_cerebellum_astoeckel_tcstewart_celiasmith.tar.bz2 cerebellum
 
-# Option 1: Import the pre-built container
-docker import topics2021_cerebellum_astoeckel_tcstewart_celiasmith.tar.gz cerebellum
+# Create a `data` directory; this is where the generated files will be stored.
+mkdir data
 
-# Option 2: Re-build the docker container
-docker build -t cerebellum .
-
-# Step 2: Execute the docker container.
-docker run -p 4567:4567 -v "$PWD/data:/topics2021-cerebellum/notebooks/out:z" -it cerebellum
+# Execute the docker container.
+docker run -p 4567:4567 -v "$PWD/data:/topics2021-cerebellum/notebooks/out:z" -it cerebellum /topics2021-cerebellum/run.sh
 ```
 This will start a Jupyter lab instance inside the docker container; open the displayed URL (e.g., `http://127.0.0.1:4567/lab?token=...`) in your browser.
 Files stored in the `notebooks/out` folder inside the container will appear in the `data` folder outside the container.
 All other changes to the filesystem are not persistent.
+
+
+### Building the Docker container from scratch
+
+Download the file `topics2021_cerebellum_source_astoeckel_tcstewart_celiasmith.tar.bz2` from OSF, or, alternatively, clone this GitHub repository.
+
+Unpack the archive and open a command prompt inside the root directory of the archive. Then run the following commands.
+```
+# Step 1: Build the docker container
+docker import topics2021_cerebellum_astoeckel_tcstewart_celiasmith.tar.bz2 cerebellum
+
+# Step 2: Execute the docker container.
+docker run -p 4567:4567 -v "$PWD/data:/topics2021-cerebellum/notebooks/out:z" -it cerebellum
+```
+
 
 ### Running the experiments
 
@@ -42,7 +62,7 @@ The results will be placed in the `data` directory.
 
 ## Bibliography entry
 
-TODO
+The article will appear later this year (2021) in the "Best of ICCM" special issue.
 
 ## License
 
