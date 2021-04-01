@@ -26,7 +26,7 @@ Download the file `topics2021_cerebellum_docker_astoeckel_tcstewart_celiasmith.t
 Place the downloaded file in a new directory. Open a command prompt and `cd` into this directory. Then, execute the following.
 ```sh
 # Import the docker container
-docker import topics2021_cerebellum_astoeckel_tcstewart_celiasmith.tar.bz2 cerebellum
+docker import topics2021_cerebellum_docker_astoeckel_tcstewart_celiasmith.tar.bz2 cerebellum
 
 # Create a `data` directory; this is where the generated files will be stored.
 mkdir data
