@@ -46,7 +46,7 @@ Download the file `topics2021_cerebellum_source_astoeckel_tcstewart_celiasmith.t
 Unpack the archive and open a command prompt inside the root directory of the archive. Then run the following commands.
 ```
 # Step 1: Build the docker container
-docker import topics2021_cerebellum_astoeckel_tcstewart_celiasmith.tar.bz2 cerebellum
+docker build -t cerebellum .
 
 # Step 2: Execute the docker container.
 docker run -p 4567:4567 -v "$PWD/data:/topics2021-cerebellum/notebooks/out:z" -it cerebellum
